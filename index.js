@@ -6,8 +6,11 @@ window.onload = function() {
         // Retrieve form values
         var name = document.getElementById("name").value;
         var uid = document.getElementById("uid").value;
+        var age = document.getElementById("age").value;
+        var language = document.getElementById("language").value;
         var phone = document.getElementById("phone").value;
         var gender = document.getElementById("gender").value;
+        var nationality = document.getElementById("nationality").value;
 
         // Initialize CDP and report data
         gigya.cdp.init({
@@ -21,8 +24,11 @@ window.onload = function() {
             CDP.report('GetCustomerList', {
                 "name": name,
                 "uid": uid,
+                "age": age,
+                "language": language,
                 "phone": phone,
-                "gender": gender
+                "gender": gender,
+                "nationality": nationality
             });
             alert("Data reported successfully!");
         })
@@ -32,3 +38,4 @@ window.onload = function() {
         });
     };
 };
+
