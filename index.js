@@ -4,8 +4,10 @@ window.onload = function() {
         event.preventDefault(); // Prevent the default form submission behavior
 
         // Retrieve form values
-        var name = document.getElementById("name").value;
-        var uid = document.getElementById("uid").value;
+        var nameInput = document.getElementById("name");
+        var uidInput = document.getElementById("uid");
+        var name = nameInput ? nameInput.value : '';
+        var uid = uidInput ? uidInput.value : '';
         var category = document.getElementById("category").value;
         var brand = document.getElementById("brand").value;
         /* var phone = document.getElementById("phone").value;
