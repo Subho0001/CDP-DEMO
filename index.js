@@ -4,6 +4,10 @@ window.onload = function() {
         event.preventDefault(); // Prevent the default form submission behavior
 
         // Retrieve form values
+        var nameInput = document.getElementById("name");
+        var uidInput = document.getElementById("uid");
+        var name = nameInput ? nameInput.value : "";
+        var uid = uidInput ? uidInput.value : "";
         
         var category = document.getElementById("category").value;
         var brand = document.getElementById("brand").value;
@@ -21,8 +25,8 @@ window.onload = function() {
             window.CDP = sdk;
             // Report data to CDP
             CDP.report('Get Anonymous Customer', {
-                "name": '',
-                "uid": '',
+                "name": name,
+                "uid": uid,
                 "category": category,
                 "brand": brand
                 /* "phone": phone,
