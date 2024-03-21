@@ -1,4 +1,4 @@
-window.onload = function() {
+     window.onload = function() {
     // Function to handle form submission
     document.getElementById("cdpForm").onsubmit = function(event) {
         event.preventDefault(); // Prevent the default form submission behavior
@@ -24,7 +24,7 @@ window.onload = function() {
         .then(function(sdk) {
             window.CDP = sdk;
             // Report data to CDP
-            CDP.report('Get Anonymous Customer', {
+            CDP.report('ProductViewEvent', {
                 "name": name,
                 "uid": uid,
                 "category": category,
