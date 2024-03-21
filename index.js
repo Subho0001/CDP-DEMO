@@ -1,4 +1,4 @@
-     window.onload = function() {
+window.onload = function() {
     // Function to handle form submission
     document.getElementById("cdpForm").onsubmit = function(event) {
         event.preventDefault(); // Prevent the default form submission behavior
@@ -8,11 +8,11 @@
         var uidInput = document.getElementById("uid");
         var name = nameInput ? nameInput.value : "";
         var uid = uidInput ? uidInput.value : "";
-        
+
         var category = document.getElementById("category").value;
         var brand = document.getElementById("brand").value;
-        /* var phone = document.getElementById("phone").value;
-        var gender = document.getElementById("gender").value;
+        var pname = document.getElementById("pname").value;
+        /* var gender = document.getElementById("gender").value;
         var nationality = document.getElementById("nationality").value; */
 
         // Initialize CDP and report data
@@ -24,11 +24,12 @@
         .then(function(sdk) {
             window.CDP = sdk;
             // Report data to CDP
-            CDP.report('ProductViewEvent', {
+            CDP.report('Get Anonymous Customer', {
                 "name": name,
                 "uid": uid,
                 "category": category,
-                "brand": brand
+                "brand": brand,
+                "pname":pname
                 /* "phone": phone,
                 "gender": gender,
                 "nationality": nationality */
@@ -41,3 +42,4 @@
         });
     };
 };
+
