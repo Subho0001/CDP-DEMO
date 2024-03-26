@@ -9,9 +9,9 @@ window.onload = function() {
         var name = nameInput ? nameInput.value : "";
         var uid = uidInput ? uidInput.value : "";
 
-        var category = document.getElementById("category").value;
-        var brand = document.getElementById("brand").value;
-        var pname = document.getElementById("pname").value;
+        var search = document.getElementById("search").value;
+        /* var brand = document.getElementById("brand").value;
+        var pname = document.getElementById("pname").value; */
         /* var gender = document.getElementById("gender").value;
         var nationality = document.getElementById("nationality").value; */
 
@@ -24,12 +24,10 @@ window.onload = function() {
         .then(function(sdk) {
             window.CDP = sdk;
             // Report data to CDP
-            CDP.report('ProductViewEvent', {
+            CDP.report('Collecting Search Items', {
                 "name": name,
                 "uid": uid,
-                "category": category,
-                "brand": brand,
-                "pname":pname
+                "searchtext": search
                 /* "phone": phone,
                 "gender": gender,
                 "nationality": nationality */
@@ -42,4 +40,3 @@ window.onload = function() {
         });
     };
 };
-
