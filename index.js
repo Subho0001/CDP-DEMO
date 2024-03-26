@@ -9,9 +9,10 @@ window.onload = function() {
         var name = nameInput ? nameInput.value : "";
         var uid = uidInput ? uidInput.value : "";
 
-        var search = document.getElementById("search").value;
-        /* var brand = document.getElementById("brand").value;
-        var pname = document.getElementById("pname").value; */
+        var pid = document.getElementById("pid").value;
+        var q = document.getElementById("quantity").value;
+        var price = document.getElementById("price").value; 
+        var tp=price * q
         /* var gender = document.getElementById("gender").value;
         var nationality = document.getElementById("nationality").value; */
 
@@ -24,13 +25,13 @@ window.onload = function() {
         .then(function(sdk) {
             window.CDP = sdk;
             // Report data to CDP
-            CDP.report('Collecting Search Items', {
+            CDP.report('Add to Cart', {
                 "name": name,
                 "uid": uid,
-                "searchtext": search
-                /* "phone": phone,
-                "gender": gender,
-                "nationality": nationality */
+                "pquantity": q,
+                "price": price,
+                "totalprice": tp,
+                "pid": pid
             });
             alert("Data reported successfully!");
         })
