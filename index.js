@@ -10,8 +10,8 @@ window.onload = function() {
         var uid = uidInput ? uidInput.value : "";
 
         var pid = document.getElementById("pid").value;
-        var q = document.getElementById("quantity").value;
-        var price = document.getElementById("price").value; 
+        var q = parseInt(document.getElementById("quantity").value);
+        var price = parseInt(document.getElementById("price").value);
         var tp=price * q
         console.log({
             "name": name,
