@@ -13,6 +13,14 @@ window.onload = function() {
         var q = document.getElementById("quantity").value;
         var price = document.getElementById("price").value; 
         var tp=price * q
+        console.log({
+            "name": name,
+            "uid": uid,
+            "pquantity": q,
+            "price": price,
+            "totalprice": tp,
+            "pid": pid
+        });
         /* var gender = document.getElementById("gender").value;
         var nationality = document.getElementById("nationality").value; */
 
