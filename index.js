@@ -9,17 +9,24 @@ window.onload = function() {
         var name = nameInput ? nameInput.value : "";
         var uid = uidInput ? uidInput.value : "";
 
-        var pid = document.getElementById("pid").value;
-        var q = parseInt(document.getElementById("quantity").value);
-        var price = parseInt(document.getElementById("price").value);
-        var tp=price * q
+        var address1 = document.getElementById("address1").value;
+        var address2 = document.getElementById("address2").value;
+        var city = document.getElementById("city").value;
+        var country = document.getElementById("country").value;
+        var postalcode = document.getElementById("postalcode").value;
+        var state = document.getElementById("state").value; 
+        var deliverymode = document.getElementById("deliverymode").value; 
+
         console.log({
             "name": name,
+            "deliverymode": deliverymode,
+            "address1": address1,
+            "city": city,
             "uid": uid,
-            "pquantity": q,
-            "price": price,
-            "totalprice": tp,
-            "pid": pid
+            "address2": address2,
+            "state": state,
+            "postalcode": postalcode,
+            "country": country
         });
         /* var gender = document.getElementById("gender").value;
         var nationality = document.getElementById("nationality").value; */
@@ -33,13 +40,16 @@ window.onload = function() {
         .then(function(sdk) {
             window.CDP = sdk;
             // Report data to CDP
-            CDP.report('Add to Cart', {
+            CDP.report('CheckOut Event', {
                 "name": name,
+                "deliverymode": deliverymode,
+                "address1": address1,
+                "city": city,
                 "uid": uid,
-                "pquantity": q,
-                "price": price,
-                "totalprice": tp,
-                "pid": pid
+                "address2": address2,
+                "state": state,
+                "postalcode": postalcode,
+                "country": country
             });
             alert("Data reported successfully!");
         })
