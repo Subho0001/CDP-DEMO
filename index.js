@@ -29,7 +29,7 @@ window.onload = function() {
               "lastName": "Doe",
               "region_isocode": "CA",
               "town": "Los Angeles",
-              "addressId": "addr124",
+              "addressId": "addr123",
               "phone": "+1234567890",
               "postalCode": "90001",
               "country_isocode": "india",
@@ -61,7 +61,7 @@ window.onload = function() {
         .then(function(sdk) {
             window.CDP = sdk;
             // Report data to CDP
-            CDP.report('CheckOutEvent', {
+            CDP.report('Check Out Event ', {
                     "deliveryMode": "standard",
                     "code": "ORDER124",
                     "user_uid": "user102@t.com",
@@ -73,7 +73,7 @@ window.onload = function() {
                       "lastName": "Doe",
                       "region_isocode": "CA",
                       "town": "Los Angeles",
-                      "addressId": "addr124",
+                      "addressId": "addr125",
                       "phone": "5634567890",
                       "postalCode": "90001",
                       "country_isocode": "IN",
