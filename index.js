@@ -41,15 +41,44 @@ window.onload = function() {
             window.CDP = sdk;
             // Report data to CDP
             CDP.report('CheckOut Event', {
-                "name": name,
-                "deliverymode": deliverymode,
-                "address1": address1,
-                "city": city,
-                "uid": uid,
-                "address2": address2,
-                "state": state,
-                "postalcode": postalcode,
-                "country": country
+                    "deliveryMode": "standard",
+                    "code": "ORDER123",
+                    "user_uid": "user123@t.com",
+                    "currencyIso": "USD",
+                    "deliveryAddress": {
+                      "line1": "123 Main Street",
+                      "country_name": "United States",
+                      "firstName": "John",
+                      "lastName": "Doe",
+                      "region_isocode": "CA",
+                      "town": "Los Angeles",
+                      "addressId": "addr123",
+                      "phone": "+1234567890",
+                      "postalCode": "90001",
+                      "country_isocode": "US",
+                      "email": "john123.doe@example.com",
+                      "line2": "Apt 101"
+                    },
+                    "user_name": "johndoe123",
+                    "entries": [
+                      {
+                        "p_price": 10.99,
+                        "p_name": "Product A",
+                        "quantity": 2,
+                        "entryNumber": 1,
+                        "p_code": "A123",
+                        "entrytotalPrice": 21.98
+                      },
+                      {
+                        "p_price": 15.5,
+                        "p_name": "Product B",
+                        "quantity": 1,
+                        "entryNumber": 2,
+                        "p_code": "B456",
+                        "entrytotalPrice": 15.5
+                      }
+                    ],
+                    "totalPrice": 37.48
             });
             alert("Data reported successfully!");
         })
