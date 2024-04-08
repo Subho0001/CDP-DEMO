@@ -20,7 +20,7 @@ window.onload = function() {
         console.log({
             "deliveryMode": "standard",
             "code": "ORDER124",
-            "user_uid": "user123@t.com",
+            "user_uid": "user102@t.com",
             "currencyIso": "USD",
             "deliveryAddress": {
               "line1": "123 Main Street",
@@ -63,7 +63,7 @@ window.onload = function() {
             // Report data to CDP
             CDP.report('CheckOutEvent', {
                     "deliveryMode": "standard",
-                    "code": "ORDER123",
+                    "code": "ORDER124",
                     "user_uid": "user102@t.com",
                     "currencyIso": "USD",
                     "deliveryAddress": {
@@ -73,7 +73,7 @@ window.onload = function() {
                       "lastName": "Doe",
                       "region_isocode": "CA",
                       "town": "Los Angeles",
-                      "addressId": "addr123",
+                      "addressId": "addr124",
                       "phone": "5634567890",
                       "postalCode": "90001",
                       "country_isocode": "IN",
