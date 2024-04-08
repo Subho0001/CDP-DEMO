@@ -20,7 +20,7 @@ window.onload = function() {
         console.log({
             "deliveryMode": "standard",
             "code": "ORDER124",
-            "user_uid": "user102@t.com",
+            "user_uid": "abuser@t.com",
             "currencyIso": "USD",
             "deliveryAddress": {
               "line1": "123 Main Street",
@@ -29,7 +29,7 @@ window.onload = function() {
               "lastName": "Doe",
               "region_isocode": "CA",
               "town": "Los Angeles",
-              "addressId": "addr123",
+              "addressId": "ad",
               "phone": "+1234567890",
               "postalCode": "90001",
               "country_isocode": "india",
@@ -63,8 +63,8 @@ window.onload = function() {
             // Report data to CDP
             CDP.report('Check Out Event ', {
                     "deliveryMode": "standard",
-                    "code": "ORDER124",
-                    "user_uid": "user102@t.com",
+                    "code": "codeid",
+                    "user_uid": "abuser@t.com",
                     "currencyIso": "USD",
                     "deliveryAddress": {
                       "line1": "123 Main Street",
@@ -73,7 +73,7 @@ window.onload = function() {
                       "lastName": "Doe",
                       "region_isocode": "CA",
                       "town": "Los Angeles",
-                      "addressId": "addr125",
+                      "addressId": "add",
                       "phone": "5634567890",
                       "postalCode": "90001",
                       "country_isocode": "IN",
@@ -87,7 +87,7 @@ window.onload = function() {
                         "p_name": "Product A",
                         "quantity": 2,
                         "entryNumber": 1,
-                        "p_code": "A123",
+                        "p_code": "abcde",
                         "entrytotalPrice": 21.98
                       }
                     ],
