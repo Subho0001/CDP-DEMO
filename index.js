@@ -19,7 +19,7 @@ window.onload = function() {
 
         console.log({
             "deliveryMode": "standard",
-            "code": "ORDER123",
+            "code": "ORDER124",
             "user_uid": "user123@t.com",
             "currencyIso": "USD",
             "deliveryAddress": {
@@ -29,7 +29,7 @@ window.onload = function() {
               "lastName": "Doe",
               "region_isocode": "CA",
               "town": "Los Angeles",
-              "addressId": "addr123",
+              "addressId": "addr124",
               "phone": "+1234567890",
               "postalCode": "90001",
               "country_isocode": "india",
