@@ -61,7 +61,7 @@ window.onload = function() {
         .then(function(sdk) {
             window.CDP = sdk;
             // Report data to CDP
-            CDP.report('Check Out Event ', {
+            CDP.report('CheckOutEvent', {
                     "deliveryMode": "standard",
                     "code": "ORDER123",
                     "user_uid": "user102@t.com",
